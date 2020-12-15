@@ -1,12 +1,25 @@
 doctype html
 html
     head
-        title low tech template
+        title blicksy
         meta(charset="utf-8")
         // styles
         style#base-style
             include styles/base-style.css
+        style#player-style
+            include styles/player-style.css
+        style#editor-style(data-editor-only)
+            include styles/editor-style.css
+        // third party libraries
+        script(data-editor-only)
+            include library/FileSaver.min.js
         // scripts
+        script(id="blitsy.js")
+            include scripts/blitsy.js
+        script(id="text.js")
+            include scripts/text.js
+        script(id="utility.js")
+            include scripts/utility.js
         script
             include scripts/main.js
     body(onload="start()")
